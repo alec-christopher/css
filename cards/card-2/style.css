@@ -1,0 +1,104 @@
+:root{
+    --clr-neutral-100: rgba(243, 243, 243, 0.979);
+    --clr-neutral-900: rgba(14, 14, 14, 0.952);
+    --clr-accent-500: rgba(235, 64, 52, 1);
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    line-height: 1.6;
+    background-color: var(--clr-neutral-100);
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+
+.card{
+    background-image: url(./img.jpg);
+    background-size: cover;
+    background-position: right 0px;
+    width:45ch;
+    height:45ch;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(14, 14, 14, 0.445);
+    position: relative;
+    z-index: 1;
+}
+
+.card-content{
+    bottom: 0;
+    position: absolute;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content::before{
+    content: "";
+    background: linear-gradient(0deg , #3f5efb, #fc466b);
+    position: absolute;
+    height: 100%;
+    width: 112%;
+    top: 20%;
+    left: -6%;
+    border-radius: 1.8rem;
+    transform: skew(19deg, -9deg);
+    z-index: -1;
+}
+
+.card-avatar{
+    background-image: url(./logo.png);
+    width: 15%;
+    object-fit: contain;
+    background-color: var(--clr-neutral-900);
+    width: 8ch;
+    border-radius: 1rem;
+    box-shadow: 5px 10px 30px rgba(14, 14, 14, 0.678);
+    padding: 10px;
+}
+
+.card-headline{
+    display: flex;
+    position: relative;
+}
+
+.card-title{
+    max-width: 32ch;
+    right: 0;
+    text-align: right;
+    padding-top: 2rem;
+    font-weight: bold;
+    color: var(--clr-neutral-100);
+}
+
+.card-details{
+    display: flex;
+    padding: 2rem;
+    padding-left: .5rem;
+    position: relative;
+}
+
+.card-expand{
+    max-width: 30ch;
+    right: 0;
+    position: absolute;
+    color: var(--clr-neutral-100);
+    border: 1px solid var(--clr-neutral-100);
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+}
+
+.card-date{
+    color: var(--clr-neutral-100);
+}
